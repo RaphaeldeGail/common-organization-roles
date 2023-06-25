@@ -1,0 +1,244 @@
+bindings:
+  - role: {{ parent }}/roles/orgExecutive
+    # The role definition for the organizationExecutive.
+    # This will be the role for the executives group in Cloud Identity.
+    title: Organization Executive
+    description: Can manage an organization.
+    stage: GA
+    includedPermissions:
+      - billing.accounts.create
+      - billing.accounts.get
+      - billing.accounts.getCarbonInformation
+      - billing.accounts.getIamPolicy
+      - billing.accounts.getPaymentInfo
+      - billing.accounts.getPricing
+      - billing.accounts.getSpendingInformation
+      - billing.accounts.getUsageExportSpec
+      - billing.accounts.list
+      - billing.budgets.get
+      - billing.budgets.list
+      - billing.credits.list
+      - billing.resourceAssociations.create
+      - billing.resourceAssociations.delete
+      - billing.resourceAssociations.list
+      - billing.subscriptions.get
+      - billing.subscriptions.list
+      - cloudkms.cryptoKeys.get
+      - cloudkms.cryptoKeys.getIamPolicy
+      - cloudkms.cryptoKeys.list
+      - cloudkms.keyRings.get
+      - cloudkms.keyRings.getIamPolicy
+      - cloudkms.keyRings.list
+      - cloudkms.keyRings.listEffectiveTags
+      - cloudkms.keyRings.listTagBindings
+      - cloudkms.locations.get
+      # - dns.dnsKeys.get
+      # - dns.dnsKeys.list
+      # - dns.managedZoneOperations.get
+      # - dns.managedZoneOperations.list
+      - dns.managedZones.get
+      - dns.managedZones.getIamPolicy
+      - dns.managedZones.list
+      - iam.googleapis.com/workloadIdentityPoolProviderKeys.create
+      - iam.googleapis.com/workloadIdentityPoolProviderKeys.delete
+      - iam.googleapis.com/workloadIdentityPoolProviderKeys.get
+      - iam.googleapis.com/workloadIdentityPoolProviderKeys.list
+      - iam.googleapis.com/workloadIdentityPoolProviderKeys.undelete
+      - iam.googleapis.com/workloadIdentityPoolProviders.create
+      - iam.googleapis.com/workloadIdentityPoolProviders.delete
+      - iam.googleapis.com/workloadIdentityPoolProviders.get
+      - iam.googleapis.com/workloadIdentityPoolProviders.list
+      - iam.googleapis.com/workloadIdentityPoolProviders.undelete
+      - iam.googleapis.com/workloadIdentityPoolProviders.update
+      - iam.googleapis.com/workloadIdentityPools.create
+      - iam.googleapis.com/workloadIdentityPools.delete
+      - iam.googleapis.com/workloadIdentityPools.get
+      - iam.googleapis.com/workloadIdentityPools.list
+      - iam.googleapis.com/workloadIdentityPools.undelete
+      - iam.googleapis.com/workloadIdentityPools.update
+      - iam.serviceAccounts.get
+      - iam.serviceAccounts.getIamPolicy
+      - iam.serviceAccounts.list
+      - orgpolicy.constraints.list
+      - orgpolicy.policies.list
+      - orgpolicy.policy.get
+      - recommender.commitmentUtilizationInsights.get
+      - recommender.commitmentUtilizationInsights.list
+      - recommender.costInsights.get
+      - recommender.costInsights.list
+      - recommender.spendBasedCommitmentInsights.get
+      - recommender.spendBasedCommitmentInsights.list
+      - recommender.spendBasedCommitmentRecommendations.get
+      - recommender.spendBasedCommitmentRecommendations.list
+      - recommender.spendBasedCommitmentRecommenderConfig.get
+      - recommender.usageCommitmentRecommendations.get
+      - recommender.usageCommitmentRecommendations.list
+      - resourcemanager.folders.create
+      - resourcemanager.folders.delete
+      - resourcemanager.folders.get
+      - resourcemanager.folders.getIamPolicy
+      - resourcemanager.folders.list
+      - resourcemanager.folders.setIamPolicy
+      - resourcemanager.folders.undelete
+      - resourcemanager.folders.update
+      - resourcemanager.hierarchyNodes.createTagBinding
+      - resourcemanager.hierarchyNodes.deleteTagBinding
+      - resourcemanager.hierarchyNodes.listEffectiveTags
+      - resourcemanager.hierarchyNodes.listTagBindings
+      - resourcemanager.organizations.get
+      - resourcemanager.organizations.getIamPolicy
+      - resourcemanager.projects.create
+      - resourcemanager.projects.delete
+      - resourcemanager.projects.get
+      - resourcemanager.projects.getIamPolicy
+      - resourcemanager.projects.list
+      - resourcemanager.projects.setIamPolicy
+      - resourcemanager.tagHolds.create
+      - resourcemanager.tagHolds.delete
+      - resourcemanager.tagHolds.list
+      - resourcemanager.tagKeys.create
+      - resourcemanager.tagKeys.delete
+      - resourcemanager.tagKeys.get
+      - resourcemanager.tagKeys.getIamPolicy
+      - resourcemanager.tagKeys.list
+      - resourcemanager.tagKeys.setIamPolicy
+      - resourcemanager.tagKeys.update
+      - resourcemanager.tagValueBindings.create
+      - resourcemanager.tagValueBindings.delete
+      - resourcemanager.tagValues.create
+      - resourcemanager.tagValues.delete
+      - resourcemanager.tagValues.get
+      - resourcemanager.tagValues.getIamPolicy
+      - resourcemanager.tagValues.list
+      - resourcemanager.tagValues.setIamPolicy
+      - resourcemanager.tagValues.update
+      - serviceusage.quotas.get
+      - serviceusage.quotas.update
+      - serviceusage.services.disable
+      - serviceusage.services.enable
+      - serviceusage.services.get
+      - serviceusage.services.list
+      - storage.buckets.get
+      - storage.buckets.getIamPolicy
+      - storage.buckets.list
+      - storage.buckets.listEffectiveTags
+      - storage.buckets.listTagBindings
+    members:
+      - group:{{ executive_group }}
+  - role: {{ parent }}/roles/workspaceBuilder
+    # The role definition for the Workspace Builder.
+    # This will be the role for the initial *builder* account in the *root* project
+    title: Workspace Builder
+    description: Can build workspace.
+    stage: GA
+    includedPermissions:
+      - billing.accounts.get
+      - billing.accounts.getIamPolicy
+      - billing.accounts.list
+      - billing.accounts.setIamPolicy
+      - billing.resourceAssociations.create
+      - billing.resourceAssociations.delete
+      - billing.resourceAssociations.list
+      - cloudkms.cryptoKeys.create
+      - cloudkms.cryptoKeys.get
+      - cloudkms.cryptoKeys.getIamPolicy
+      - cloudkms.cryptoKeys.list
+      - cloudkms.cryptoKeys.setIamPolicy
+      - cloudkms.cryptoKeys.update
+      - cloudkms.keyRings.create
+      - cloudkms.keyRings.createTagBinding
+      - cloudkms.keyRings.deleteTagBinding
+      - cloudkms.keyRings.get
+      - cloudkms.keyRings.getIamPolicy
+      - cloudkms.keyRings.list
+      - cloudkms.keyRings.listEffectiveTags
+      - cloudkms.keyRings.listTagBindings
+      - cloudkms.keyRings.setIamPolicy
+      - cloudkms.locations.generateRandomBytes
+      - cloudkms.locations.get
+      - dns.dnsKeys.get
+      - dns.dnsKeys.list
+      - dns.managedZoneOperations.get
+      - dns.managedZoneOperations.list
+      - dns.managedZones.create
+      - dns.managedZones.delete
+      - dns.managedZones.get
+      - dns.managedZones.getIamPolicy
+      - dns.managedZones.list
+      - dns.managedZones.setIamPolicy
+      - dns.managedZones.update
+      - iam.serviceAccounts.create
+      - iam.serviceAccounts.delete
+      - iam.serviceAccounts.get
+      - iam.serviceAccounts.getIamPolicy
+      - iam.serviceAccounts.list
+      - iam.serviceAccounts.setIamPolicy
+      - iam.serviceAccounts.undelete
+      - iam.serviceAccounts.update
+      - orgpolicy.constraints.list
+      - orgpolicy.policies.list
+      - orgpolicy.policy.get
+      - resourcemanager.folders.create
+      - resourcemanager.folders.get
+      - resourcemanager.folders.getIamPolicy
+      - resourcemanager.folders.list
+      - resourcemanager.folders.setIamPolicy
+      - resourcemanager.hierarchyNodes.createTagBinding
+      - resourcemanager.hierarchyNodes.deleteTagBinding
+      - resourcemanager.hierarchyNodes.listEffectiveTags
+      - resourcemanager.hierarchyNodes.listTagBindings
+      - resourcemanager.organizations.get
+      - resourcemanager.projects.create
+      - resourcemanager.projects.createBillingAssignment
+      - resourcemanager.projects.deleteBillingAssignment
+      - resourcemanager.projects.get
+      - resourcemanager.projects.getIamPolicy
+      - resourcemanager.projects.list
+      - resourcemanager.projects.setIamPolicy
+      - resourcemanager.projects.update
+      - resourcemanager.tagHolds.create
+      - resourcemanager.tagHolds.delete
+      - resourcemanager.tagHolds.list
+      - resourcemanager.tagKeys.get
+      - resourcemanager.tagKeys.getIamPolicy
+      - resourcemanager.tagKeys.list
+      - resourcemanager.tagValueBindings.create
+      - resourcemanager.tagValueBindings.delete
+      - resourcemanager.tagValues.create
+      - resourcemanager.tagValues.delete
+      - resourcemanager.tagValues.get
+      - resourcemanager.tagValues.getIamPolicy
+      - resourcemanager.tagValues.list
+      - resourcemanager.tagValues.setIamPolicy
+      - resourcemanager.tagValues.update
+      - storage.buckets.create
+      - storage.buckets.createTagBinding
+      - storage.buckets.deleteTagBinding
+      - storage.buckets.get
+      - storage.buckets.getIamPolicy
+      - storage.buckets.list
+      - storage.buckets.listEffectiveTags
+      - storage.buckets.listTagBindings
+      - storage.buckets.setIamPolicy
+      - storage.buckets.update
+    members: []
+  - role: roles/billing.admin
+    members:
+      - group:{{ finops_group }}
+  - role: roles/essentialcontacts.admin
+    members:
+      - user:{{ ext_adm_user }}
+  - role: roles/iam.organizationRoleAdmin
+    members:
+      - group:{{ admins_group }}
+  - role: roles/orgpolicy.policyAdmin
+    members:
+      - group:{{ policy_group }}
+  - role: roles/resourcemanager.organizationAdmin
+    members:
+      - group:{{ admins_group }}
+      - user:{{ ext_adm_user }}
+  - role: roles/resourcemanager.organizationViewer
+    members:
+      - group:{{ finops_group }}
+      - group:{{ policy_group }}
